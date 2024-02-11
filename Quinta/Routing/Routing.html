@@ -1,0 +1,55 @@
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <body ng-app="myApp">
+
+        <p><a href="#/!">Main</a></p>
+
+        <a href="#!ferrari">Ferrari</a>
+        <a href="#!lamborghini">Lamborghini</a>
+
+        <div ng-view></div>
+        
+        <script>
+            var app = angular.module("myApp", ["ngRoute"]);
+            app.config(function($routeProvider) {
+                $routeProvider
+                .when("/", {
+                    templateUrl : "main.html"
+                })
+                .when("/ferrari", {
+                    templateUrl : "ferrari.html",
+                    controller : "ferrariCtrl"
+                })
+                .when("/lamborghini", {
+                    templateUrl : "lamborghini.html",
+                    controller : "lamborghiniCtrl"
+                })
+            });
+            
+            app.controller("ferrariCtrl", function ($scope, $http, $sce) {
+                $http.get("./ferrari.json")
+                    .then(response => {
+                        $scope.msg = $sce.trustAsHtml(estrai(response.data));
+                    })
+                    .catch(error => console.error("Error fetching data:", error));
+            });
+            
+            app.controller("lamborghiniCtrl", function ($scope, $http, $sce) {
+                $http.get("./lamborghini.json")
+                    .then(response => {
+                        $scope.msg = $sce.trustAsHtml(estrai(response.data));
+                    })
+                    .catch(error => console.error("Error fetching data:", error));
+            });
+            
+            function estrai(car, $scope){
+                var data = "";
+                for (var i = 0; i < car.length; i++) {
+                    data += "<div class='card'><div class='card-body'><h5 class='card-title'>" + car[i].modello + "</h5><div>Cv: " + car[i].cv + "</div><div>Motore: " + car[i].motore + "</div><div>Accelerazione: " + car[i].accelerazione + "</div><div>Prezzo: €" + car[i].prezzo + "</div></div>";
+                }
+                return data;
+            }
+        </script>
+    </body>
+</html>
