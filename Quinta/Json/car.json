@@ -1,10 +1,10 @@
 [
     {
         "brand": "ferrari",
-        "file": "./ferrari.json"
+        "file": "./Json/ferrari.json"
     },
     {
         "brand": "lamborghini",
-        "file": "./lamborghini.json"
+        "file": "./Json/lamborghini.json"
     }
 ]
