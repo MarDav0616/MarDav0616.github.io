@@ -1,0 +1,43 @@
+
+[
+    {
+        "modello": "Purosangue",
+        "cv": "752",
+        "motore": "V12",
+        "accelerazione": "3.3s",
+        "prezzo": "385 730"
+    },
+    {
+        "modello": "SF90 Stradale",
+        "cv": "1000",
+        "motore": "V8",
+        "accelerazione": "2.5s",
+        "prezzo": "427 930"
+    },
+    {
+        "modello": "296 GTB",
+        "cv": "830",
+        "motore": "V6",
+        "accelerazione": "2.9s",
+        "prezzo": "289 830"
+    },
+    {
+        "modello": "812 GTS",
+        "cv": "800",
+        "motore": "V12",
+        "accelerazione": "3.0s",
+        "prezzo": "340 590"
+    },{
+        "modello": "Roma",
+        "cv": "620",
+        "motore": "V8",
+        "accelerazione": "3.4s",
+        "prezzo": "217 001"
+    },{
+        "modello": "Portofino M",
+        "cv": "620",
+        "motore": "V8",
+        "accelerazione": "3.45s",
+        "prezzo": "321 632"
+    }
+]
