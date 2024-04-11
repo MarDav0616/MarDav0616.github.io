@@ -49,7 +49,6 @@
                         if (selectedProduct) {
                             carrello.push(selectedProduct);
                             localStorage.setItem("carrello", JSON.stringify(carrello));
-                            cart();
                         } else {
                             console.error("Errore: Prodotto non trovato");
                         }
