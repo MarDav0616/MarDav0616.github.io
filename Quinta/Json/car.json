@@ -1,7 +1,7 @@
 [
     {
         "brand": "ferrari",
-        "file": "./Json/ferrari.json"
+        "file": "Quinta/Json/ferrari.json"
     },
     {
         "brand": "lamborghini",
