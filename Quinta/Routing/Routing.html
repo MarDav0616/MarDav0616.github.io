@@ -28,7 +28,7 @@
             });
             
             app.controller("ferrariCtrl", function ($scope, $http, $sce) {
-                $http.get("./Json/ferrari.json")
+                $http.get("../Json/ferrari.json")
                     .then(response => {
                         $scope.msg = $sce.trustAsHtml(estrai(response.data));
                     })
@@ -36,7 +36,7 @@
             });
             
             app.controller("lamborghiniCtrl", function ($scope, $http, $sce) {
-                $http.get("./Json/lamborghini.json")
+                $http.get("../Json/lamborghini.json")
                     .then(response => {
                         $scope.msg = $sce.trustAsHtml(estrai(response.data));
                     })
