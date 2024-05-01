@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import React,{ useState, useEffect } from 'react';
-import cars from './cars.json';
+import cars from '../../Json/ferrari.json';
 
 function Page() {
     const navigate = useNavigate();
